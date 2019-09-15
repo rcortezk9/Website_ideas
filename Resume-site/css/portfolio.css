@@ -1,171 +1,93 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
-
-/*.port-section:after {*/
-/*     animation: grain 1s steps(10) infinite;*/
-/*     background-image: url(../images/grains.png);*/
-/*     content: "";*/
-/*     height: 300%;*/
-/*     left: -50%;*/
-/*     opacity: 0.8;*/
-/*     position: fixed;*/
-/*     top: -110%;*/
-/*     width: 300%;*/
-/*     z-index: 0;*/
-/*}*/
-
-/*@keyframes grain {*/
-/*     0%, 100% { transform: translate(0, 0); }*/
-/*     10% { transform: translate(-5%, -10%); }*/
-/*     20% { transform: translate(-15%, 5%); }*/
-/*     30% { transform: translate(7%, -25%); }*/
-/*     40% { transform: translate(-5%, 25%); }*/
-/*     50% { transform: translate(-15%, 10%); }*/
-/*     60% { transform: translate(15%, 0); }*/
-/*     70% { transform: translate(0, 15%); }*/
-/*     80% { transform: translate(3%, 35%); }*/
-/*     90% { transform: translate(-10%, 10%); }*/
-/*}*/
-
-.port-section {
-     z-index: 1;
-     position: relative;
+.flex-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-flow: row wrap;
+    align-content: end;
 }
 
-/*h1 {*/
-/*     color: #e3e3e3 !important;*/
-/*     font-family: "Playfair Display", serif !important;*/
-/*     margin: 32px 0 32px 40px !important;*/
-/*}*/
-
-.row {
-     z-index: 1;
-     margin: 0 !important;
-     padding: 0 !important;
+.flex-container .card {
+    position: relative;
+    margin: 0 10px 0 10px;
 }
 
-.cardd {
-     border: 1px solid rgba(255,255,255,0.1);
-     height: 220px;
-     -webkit-transition: 1s !important;
+.flex-container .card .face {
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
 }
 
-.row h5 {
-     color: #fff;
-     font-family: "Poppins", serif;
-     margin: 48px 0 2px 4px;
-     font-size: 16px;
+.flex-container .card .face.face1 {
+    position: relative;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
 }
 
-.row h5:before {
-     position: absolute;
-     content: "";
-     top: 50px;
-     left: -2px;
-     width: 2px;
-     height: 22px;
-     display: block;
-     background: #fff;
+.flex-container .card:hover .face.face1 {
+    background: #ff0057;
+    transform: translateY(0);
 }
 
-.port-para {
-     color: grey;
-     margin-left: 4px;
-     font-size: 14px;
-     margin-bottom: 70px !important;
+.flex-container .card .face.face1 .content {
+    opacity: 0.2;
+    transition: 0.5s;
 }
 
-.link {
-     margin-left: 4px;
-     color: lightgrey !important;
-     font-family: Poppins, serif;
-     font-weight: bolder;
-     text-transform: uppercase;
-     font-size: 10px;
-     letter-spacing: 2px;
+.flex-container .card:hover .face.face1 .content {
+    opacity: 1;
 }
 
-.link:hover {
-     text-decoration: none !important;
-     color: grey !important;
+.flex-container .card .face.face1 .content img {
+    max-width: 100px;
 }
 
-.cardd:hover:before {
-     -webkit-transition: 1s !important;
-     content: "";
-     position: absolute;
-     top: -100px;
-     left: 100px;
-     width: 280px;
-     height: 280px;
-     z-index: -1;
-     animation: anim 3.2s ease-in-out;
+.flex-container .card .face.face1 .content h3 {
+    margin: 10px 0 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
 }
 
-.card1.cardd:hover::before {
-     background: url(../images/simon.png);
-}
-.card2.cardd:hover::before {
-     background: url(../images/weather.png);
-}
-.card3.cardd:hover::before {
-     background: url(../images/calculator.png);
-}
-.card4.cardd:hover::before {
-     background: url(../images/simon.png);
-}
-.card5.cardd:hover::before {
-     background: url(../images/weather.png);
-}
-.card6.cardd:hover::before {
-     background: url(../images/calculator.png);
-}
-.card7.cardd:hover::before {
-     background: url(../images/simon.png);
-}
-.card8.cardd:hover::before {
-     background: url(../images/weather.png);
+.flex-container .card .face.face2 {
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    transform: translateY(-100px);
 }
 
-/*@keyframes anim {*/
-/*     0% {*/
-/*          opacity: 0;*/
-/*          left: 70px;*/
-/*     }*/
+.flex-container .card:hover .face.face2 {
+    transform: translateY(0);
+}
 
-/*     20% {*/
-/*          opacity: 1;*/
-/*          left: 100px;*/
-/*     }*/
+.flex-container .card .face.face2 .content p {
+    margin: 0;
+    padding: 0;
+}
 
-/*     100% {*/
-/*          opacity: 1;*/
-/*          left: 100px;*/
-/*     }*/
-/*}*/
+.flex-container .card .face.face2 .content a {
+    margin: 15px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
 
-@media only screen and (max-width: 900px) {
-     .link {
-          display: none !important;
-     }
-
-     .cardd {
-          height: 100px;
-     }
-
-     .row h5 {
-          margin: 28px 0 2px 4px;
-     }
-
-     .row p {
-          margin-bottom: 10px !important;
-     }
-
-     .row h5::before {
-          top: 26px;
-     }
-
-     .cardd:hover::before {
-          display: none;
-     }
+.flex-container .card .face.face2 .content a:hover {
+    background: #333;
+    color: #fff;
 }
