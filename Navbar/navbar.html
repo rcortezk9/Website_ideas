@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="navbar-style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:500&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- plugin -->
+    <script src="jquery.novacancy.min.js"></script>
+
+    <title>Rene Cortez</title>
+  </head>
+   <body>
+      <div class="wrapper">
+        <header>
+          <nav>
+            <div class="menu-icon">
+              <i class="fa fa-bars fa-2x"></i>
+            </div>
+            <div class="logo">
+              <a href="#">Rene</a>
+            </div>
+            <div class="menu">
+              <ul>
+                <li><a href="#">item1</a></li>
+                <li><a href="#">item2</a></li>
+                <li><a href="#">item3</a></li>
+                <li><a href="#">item4</a></li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="neon-text">
+            <p class="neon" id="neonthis">
+              &nbsp;data has<br>
+              &nbsp;&nbsp;a<br>
+              &nbsp;better<br>
+              &nbsp;&nbsp;idea.
+            </p>
+          </div>
+
+        </header>
+        <div class="content">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+      </div>
+      <script type="text/javascript">
+
+        //Menu toggle-button
+
+        $(document).ready(function () {
+          $(".menu-icon").on("click", function () {
+            $("nav ul").toggleClass("showing");
+          });
+          //neon text
+          $('#neonthis').novacancy({
+
+            'reblinkProbability' : 0.3,
+            'blinkMin' : 0.1,
+            'blinkMax' : 0.2,
+            'loopMin' : 1,
+            'loopMax' : 2,
+            'color' : 'red',
+            'glow' : ['0 0 80px red', '0 0 30px red', '0 0 6px red'],
+            'off' : 2,
+            'blink' : 0,
+            'autoOn' : true,
+          })
+        });
+        //Scrolling Effect
+        $(window).on("scroll", function () {
+          if($(window).scrollTop()) {
+            $('nav').addClass('black');
+          }
+          else {
+            $('nav').removeClass('black')
+          }
+        })
+        
+      </script>
+  </body>
+</html>

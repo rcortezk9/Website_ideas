@@ -1,0 +1,66 @@
+
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.hero {
+    background: black url("../images/hero.jpg") center/cover;
+}
+
+.icons {
+    color: #fff;
+    margin-right: 30px;
+}
+
+.notification {
+    background-color: #000000;
+}
+
+.section {
+    background-color: #000000;
+}
+
+.tile.is-child {
+    padding: 0 0 0 0;
+}
+
+#proj-1 {
+    background: black url("../images/simon.png") center/cover;
+}
+
+#proj-2 {
+    background: black url("../images/weather.png") center/cover;
+}
+
+#proj-3 {
+    background: black url("../images/calculator.png") center/cover;
+}
+
+.is-paddingless-horizontal {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns:
+        [xl-start] 1fr 1.5rem [md-start] minmax(0, 624px) [md-end] 1.5rem 1fr [xl-end];
+}
+
+.grid *  { grid-column: md; }
+.grid-xl { grid-column: xl; }
+
+
+
+@media (max-width: 1024px) {
+    .hero {
+        background: black url(../images/hero.jpg) center / cover;
+    }
+}
+@media (max-width:  768px) {
+    .hero {
+        background: black url(../images/hero.jpg) center / cover;
+    }
+}
