@@ -29,12 +29,11 @@ header {
 }
 
 .logo {
-    position: fixed;
-    float: left;
+    display: inline-block;
     margin: 16px 36px;
     color: #fff;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 30px;
 }
 
 .logo a {
@@ -109,9 +108,11 @@ nav ul li a:hover {
 
 @media(max-width: 580px) {
     .logo {
+        float: left;
+        display: list-item;
         position: fixed;
         top: 0;
-        margin-top: 16px;
+        margin-top: 5px;
     }
 
     nav ul {
