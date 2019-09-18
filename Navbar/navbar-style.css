@@ -23,7 +23,7 @@ header {
 }
 
 .neon {
-    font-size: 72px;
+    font-size: 70px;
     font-family: "IBM Plex Mono", sans-serif;
     color: #fff;
     font-weight: lighter;
@@ -121,6 +121,10 @@ nav ul li a {
 
     .menu-icon {
         display: block;
+    }
+
+    .neon {
+        font-size: 40px;
     }
 
     .neon-text {
